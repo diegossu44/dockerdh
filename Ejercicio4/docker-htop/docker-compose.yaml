@@ -1,0 +1,10 @@
+services:
+  htop:
+    image: ubuntu:latest
+    container_name: htop
+    tty: true
+    stdin_open: true
+    command: ["bash", "-c", "apt-get update && apt-get install -y htop && htop"]
+    ports:
+      - "8080:8080"  # Solo si deseas exponer el puerto
+
